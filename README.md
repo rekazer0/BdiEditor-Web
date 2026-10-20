@@ -5,6 +5,8 @@ BdiEditor 的开源介绍与教程网站，面向百度、搜狗、手心三种�
 在线站点（当前 Sites 部署为账号私有预览）：https://bdieditor-guide.equalthyme11.chatgpt.site
 公开源码：https://github.com/rekazer0/BdiEditor-Web
 
+教程中的界面截图来自项目内置官方百度 BDS 模板、官方搜狗 APK 提取骨架和手心默认 SXI 模板；截图旁标注了具体来源与验证边界。
+
 ## 内容
 
 - 介绍页：编辑器工作流、格式边界、隐私与开源入口
