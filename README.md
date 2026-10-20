@@ -2,6 +2,9 @@
 
 BdiEditor 的开源介绍与教程网站，面向百度、搜狗、手心三种手机输入法皮肤生态。
 
+在线站点（当前 Sites 部署为账号私有预览）：https://bdieditor-guide.equalthyme11.chatgpt.site
+公开源码：https://github.com/rekazer0/BdiEditor-Web
+
 ## 内容
 
 - 介绍页：编辑器工作流、格式边界、隐私与开源入口
