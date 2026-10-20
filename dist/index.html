@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="BdiEditor 开源皮肤编辑器介绍与教程：百度、搜狗、手心皮肤的界面编辑、源码编辑和跨格式导出。">
+  <title>BdiEditor · 皮肤编辑器与教程</title>
+  <link rel="icon" href="assets/favicon.svg">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="BdiEditor 首页"><span class="brand-mark">B</span><span>BdiEditor</span></a>
+    <nav aria-label="主导航">
+      <a href="#home">介绍</a>
+      <a href="#guide">教程</a>
+      <a href="#formats">格式地图</a>
+      <a href="https://github.com/rekazer0/BdiEditor" target="_blank" rel="noreferrer">编辑器源码 ↗</a>
+    </nav>
+    <a class="button button-small" href="#quickstart">开始编辑</a>
+  </header>
+
+  <main>
+    <section id="home" class="hero section-shell">
+      <div class="hero-copy">
+        <p class="eyebrow">开源 · 本地处理 · 三种皮肤格式</p>
+        <h1>把输入法皮肤<br><em>做成你想要的样子。</em></h1>
+        <p class="lede">BdiEditor 把文件、画布和属性检查器放在同一条工作流里。打开皮肤，改视觉，预览横竖屏，再保存或导出。</p>
+        <div class="hero-actions">
+          <a class="button" href="https://github.com/rekazer0/BdiEditor" target="_blank" rel="noreferrer">查看 GitHub</a>
+          <a class="text-link" href="#guide">阅读教程 <span>→</span></a>
+        </div>
+        <div class="trust-row"><span>GPL-3.0</span><span>macOS / Windows / Web</span><span>版本 2.0.0-beta4</span></div>
+      </div>
+      <div class="hero-art">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="phone-card">
+          <div class="phone-top"><span>09:41</span><span>编辑预览</span><span>▴</span></div>
+          <div class="phone-screen">
+            <div class="preview-label">PY_26 · 深色 · 横屏</div>
+            <div class="keyboard-preview">
+              <div class="key-row"><b>Q</b><b>W</b><b>E</b><b>R</b><b>T</b><b>Y</b><b>U</b><b>I</b><b>O</b><b>P</b></div>
+              <div class="key-row offset"><b>A</b><b>S</b><b>D</b><b>F</b><b>G</b><b>H</b><b>J</b><b>K</b><b>L</b></div>
+              <div class="key-row"><b class="wide">⇧</b><b>Z</b><b>X</b><b>C</b><b>V</b><b>B</b><b>N</b><b>M</b><b class="wide">⌫</b></div>
+              <div class="key-row"><b class="wide">123</b><b class="space">空格</b><b class="wide">↵</b></div>
+            </div>
+          </div>
+          <div class="phone-bottom"><span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="zoom">100%</span></div>
+        </div>
+        <div class="floating-note note-a"><span class="note-icon">✦</span><strong>实时预览</strong><small>改动马上可见</small></div>
+        <div class="floating-note note-b"><span class="note-icon">⌘</span><strong>源代码</strong><small>精确到每个字段</small></div>
+      </div>
+    </section>
+
+    <section class="stats section-shell">
+      <div><strong>5</strong><span>可编辑格式家族</span></div>
+      <div><strong>3</strong><span>核心皮肤生态</span></div>
+      <div><strong>60+</strong><span>手心面板类型</span></div>
+      <div><strong>0</strong><span>上传到服务器的皮肤文件</span></div>
+    </section>
+
+    <section class="story section-shell">
+      <div class="section-intro"><p class="eyebrow">为什么用它</p><h2>从一张图片，走到<br>一份可用的皮肤。</h2></div>
+      <div class="story-grid">
+        <article><span class="step">01</span><h3>看得见</h3><p>画布模拟设备、安全区、明暗主题和横竖屏。按键状态、候选栏、工具栏与气泡不会藏在配置文件里。</p></article>
+        <article><span class="step">02</span><h3>改得准</h3><p>检查器把位置、尺寸、样式、字体、颜色、动作和资源拆成可读的字段；源码面板保留原始语义。</p></article>
+        <article><span class="step">03</span><h3>带得走</h3><p>同格式保存，或在导出前查看降级提醒。未知字段、未改资源和压缩包结构尽量原样保留。</p></article>
+      </div>
+    </section>
+
+    <section id="formats" class="format-section section-shell">
+      <div class="section-intro"><p class="eyebrow">格式地图</p><h2>同一条工作流，<br>三种不同的语言。</h2><p>先认清“谁负责布局”，再决定从哪里改。下面的边界与当前编辑器实现一致。</p></div>
+      <div class="format-table" role="table">
+        <div class="format-head" role="row"><span>生态</span><span>文件</span><span>最适合改什么</span><span>要记住的边界</span></div>
+        <div class="format-row" role="row"><span class="format-name baidu"><i></i>百度</span><code>.bdi · .bds · .bda</code><span>布局、按键、候选栏、工具栏、资源、字体与动作</span><span>BDA 几何来自官方基础布局；BDI/BDS 才能直接改按键排布。</span></div>
+        <div class="format-row" role="row"><span class="format-name sogou"><i></i>搜狗</span><code>.ssf · .mssf</code><span>背景、按键视觉、文字、候选栏、动画配置与音效</span><span>搜狗皮肤不含按键位置，检查器只改视觉；加密容器保存后变普通 ZIP。</span></div>
+        <div class="format-row" role="row"><span class="format-name palm"><i></i>手心</span><code>.sxi</code><span>skin.json、前景样式、图片切片、明暗主题</span><span>skin.json 是唯一数据源；概览里的布局是只读投影，结构要进源码面板改。</span></div>
+      </div>
+    </section>
+
+    <section id="quickstart" class="quickstart section-shell">
+      <div class="quick-card">
+        <div><p class="eyebrow">三分钟开始</p><h2>打开一份皮肤，先不要怕。</h2><p>教程从最安全的操作开始：打开、选择、预览、撤销。你可以下载示例皮肤，跟着每一步走。</p></div>
+        <ol><li><b>打开</b><span>选择 .bdi / .bds / .bda / .ssf / .sxi，或点“新建项目”。</span></li><li><b>看懂</b><span>左侧选对象，中间看画布，右侧检查器改属性。</span></li><li><b>保存</b><span>同格式写回；跨格式导出前先读降级列表。</span></li></ol>
+        <a class="button" href="#guide">进入完整教程 →</a>
+      </div>
+    </section>
+
+    <section id="guide" class="guide section-shell">
+      <div class="guide-header"><div><p class="eyebrow">完整教程</p><h2>界面操作 × 源代码操作</h2><p>每个修改都成对讲：先在界面完成同一件事，再在源码里找到它对应的字段。按任务找章节，不按文件名背命令。</p></div><label class="search"><span>⌕</span><input id="guide-search" type="search" placeholder="搜索：候选栏、skin.json、切片…" aria-label="搜索教程"></label></div>
+      <div class="guide-layout">
+        <aside class="guide-nav" aria-label="教程分类">
+          <button class="guide-filter active" data-filter="all">全部章节 <span>12</span></button>
+          <button class="guide-filter" data-filter="ui">界面操作 <span>6</span></button>
+          <button class="guide-filter" data-filter="source">源代码操作 <span>6</span></button>
+          <hr>
+          <a href="#chapter-open">01 · 打开与识别</a><a href="#chapter-canvas">02 · 画布与布局</a><a href="#chapter-style">03 · 样式与资源</a><a href="#chapter-panels">04 · 候选栏与面板</a><a href="#chapter-actions">05 · 动作、动画与声音</a><a href="#chapter-export">06 · 导出与验收</a>
+        </aside>
+        <div class="chapters" id="chapters">
+          <article class="chapter" data-kind="ui" data-search="打开 识别 bdi bds bda ssf mssf sxi 新建 文件类型">
+            <div class="chapter-meta"><span class="chapter-number">01</span><span class="pill ui">界面操作</span></div><div><h3 id="chapter-open">打开皮肤，确认它是谁</h3><p class="chapter-lede">不要先改颜色。先确认格式、平台、主题和资源是否完整。</p><div class="chapter-body"><div class="paired-note"><b>同一修改 · 两条路径</b><strong>打开 / 识别</strong><span><em>界面</em>打开文件后看概览、对象头和格式标签。</span><span><em>源码</em>从源文件树确认包结构、主配置和当前分辨率目录。</span></div><div><h4>操作路径</h4><ol><li>点左上角“打开”，选择皮肤文件；也可从“新建项目”选择百度模板。</li><li>左侧“概览”会按格式显示布局、候选栏、工具栏、资源与源码入口。</li><li>看右侧对象头的名称、文件和状态；有错误时先停在原生错误对话框。</li></ol></div><div class="callout"><b>格式提示</b><p><strong>百度</strong>：BDA 会按 appearanceConfig 识别 iOS/Android；<strong>搜狗</strong>：支持普通 ZIP 与 Skin 加密容器；<strong>手心</strong>：从 skin.json 生成预览。</p></div></div></div>
+          </article>
+          <article class="chapter" data-kind="ui" data-search="画布 设备 横竖屏 明暗 安全区 缩放 平移 布局 按键">
+            <div class="chapter-meta"><span class="chapter-number">02</span><span class="pill ui">界面操作</span></div><div><h3 id="chapter-canvas">用画布读懂布局</h3><p class="chapter-lede">画布是结果，检查器是改动，源码是证据。三者要互相对照。</p><div class="chapter-body"><div class="paired-note"><b>同一修改 · 两条路径</b><strong>改一个按键的几何</strong><span><em>界面</em>选中按键，在检查器改 X / Y / W / H，画布即时更新。</span><span><em>源码</em>百度改 keys.ini 的 POS / SIZE；搜狗只能查看布局投影；手心改 skin.json 的 rect / hit_rect。</span></div><div><h4>操作路径</h4><ol><li>在画布工具栏切换设备、横竖屏、明暗主题、安全区和辅助线。</li><li>点击按键，右侧检查器编辑 X/Y/W/H、动作和正常/按下样式。</li><li>桌面端滚轮缩放、拖动平移；移动端双指缩放，底部拖柄切换上下分屏。</li></ol></div><figure><img src="assets/preview-baidu.png" alt="BdiEditor 百度皮肤画布预览"><figcaption>真实预览：布局与按键状态同步更新。</figcaption></figure></div></div>
+          </article>
+          <article class="chapter" data-kind="ui source" data-search="样式 资源 图片 切片 字体 颜色 前景 背景">
+            <div class="chapter-meta"><span class="chapter-number">03</span><span class="pill ui">界面操作</span><span class="pill source">源代码操作</span></div><div><h3 id="chapter-style">样式、图片和切片</h3><p class="chapter-lede">皮肤的质感来自资源，也来自资源如何被拉伸、裁切和引用。</p><div class="chapter-body"><div class="paired-note"><b>同一修改 · 两条路径</b><strong>替换一个按键背景</strong><span><em>界面</em>点背景样式卡片，选图片，切换正常 / 按下。</span><span><em>源码</em>百度改 BACK_STYLE；搜狗改 BG_IMAGES → NORMAL / PRESSED 与拉伸带；手心改 skin.json 的 s_2 normal / hl。</span></div><div><h4>界面操作</h4><ol><li>在“背景 / 前景 / 文字”分组点样式卡片，切换正常或按下状态。</li><li>点图片缩略图打开资源选择器；搜狗会保留九宫格拉伸参数。</li><li>手心可改前景样式编号、图片和切片；新增样式后再把它追加到前景引用。</li></ol></div><div class="code-note"><b>源代码对照</b><pre><code>[Key_Q]
+BACK_STYLE=KeyBg_Default_Latin
+FORE_STYLE=KeyFore_Default
+TEXT_COLOR=0xFF112233
+FG_RECT=0,0,1,0.75</code></pre><small>百度 BDI/BDS 的 INI 用样式引用；搜狗字段位于分辨率目录的 phoneSkin.ini / keys.ini；手心对应 skin.json 的 style 引用。</small></div></div></div>
+          </article>
+          <article class="chapter" data-kind="ui source" data-search="候选栏 工具栏 面板 输入区 气泡 CND POP CSS TIL">
+            <div class="chapter-meta"><span class="chapter-number">04</span><span class="pill ui">界面操作</span><span class="pill source">源代码操作</span></div><div><h3 id="chapter-panels">候选栏、工具栏和所有面板</h3><p class="chapter-lede">完整的皮肤不只有按键：输入区、候选栏、云输入、符号、表情、更多面板和气泡都要验。</p><div class="chapter-body"><div class="paired-note"><b>同一修改 · 两条路径</b><strong>改候选栏或工具栏颜色</strong><span><em>界面</em>选择候选栏 / 工具栏对象，在文字与背景分组改颜色。</span><span><em>源码</em>百度对照 CAND / BAR / SWITCH 与 .cnd；搜狗对照 CandidateView / TextStyle；手心对照 c.cand1 或 top_cand。</span></div><div><h4>按区域检查</h4><ul><li><b>百度</b>：面板、INPUT、CAND、SCAND、HINT、MORE、LOGO、EMOJI；可改尺寸、字体、颜色、间距、图标和动画引用。</li><li><b>搜狗</b>：候选栏、输入码、符号列、工具栏和气泡按搜狗语义出现；布局由输入法决定。</li><li><b>手心</b>：覆盖拼音、英文、数字、符号、手写、表情等 60+ 面板类型，布局结构回到 skin.json。</li></ul></div><div class="code-note"><b>百度源码地图</b><pre><code>res/
+  *.png · *.9.png · *.wav
+1080/status1/
+  phoneSkin.ini · keys.ini
+  *.cnd · *.pop · *.css · *.til
+info.txt</code></pre><small>百度 V6 工具书将 INI、CND、POP、CSS、TIL、Info.txt 分开讲解；编辑器的检查器会把常用字段翻译成中文标签。</small></div></div></div>
+          </article>
+          <article class="chapter" data-kind="ui source" data-search="动作 功能码 划选 长按 动画 粒子 声音 ANIM_STYLE PRESS_ANIM">
+            <div class="chapter-meta"><span class="chapter-number">05</span><span class="pill ui">界面操作</span><span class="pill source">源代码操作</span></div><div><h3 id="chapter-actions">动作、动画与声音</h3><p class="chapter-lede">视觉编辑器能预览状态，但它不是输入法引擎。功能码要按格式语义验证。</p><div class="chapter-body"><div class="paired-note"><b>同一修改 · 两条路径</b><strong>改一个按下动作或动画引用</strong><span><em>界面</em>在动作 / 动画分组修改点击、长按、动画引用或声音。</span><span><em>源码</em>百度对照功能码与 ANIM_STYLE；搜狗对照 anim.ini / sound_android.ini；手心对照 values、s_4、s_5。</span></div><div><h4>可以怎么做</h4><ol><li>百度按键可改显示文字、点击输入、上下左右滑和长按动作；未明确支持的 Fxx/Sxx 只显示含义或事件。</li><li>搜狗可以编辑按键动画配置、音效和资源；画布不会播放按键动画。</li><li>手心可以在 JSON 里改动画与样式引用；先保存，再重新打开验证结构。</li></ol></div><figure><img src="assets/preview-source.png" alt="BdiEditor 深色源码与预览"><figcaption>源码和画布并排，是定位问题最快的方式。</figcaption></figure></div></div>
+          </article>
+          <article class="chapter" data-kind="ui source" data-search="导出 转换 保存 降级 验收 下载 重开 像素">
+            <div class="chapter-meta"><span class="chapter-number">06</span><span class="pill ui">界面操作</span><span class="pill source">源代码操作</span></div><div><h3 id="chapter-export">保存、导出，再验一遍</h3><p class="chapter-lede">“导出了文件”不等于“目标输入法能用”。把下载和重开纳入验收。</p><div class="chapter-body"><div class="paired-note"><b>同一修改 · 两条路径</b><strong>导出后验证同一个修改</strong><span><em>界面</em>导出、下载、重开，观察同一按键和主题是否保留。</span><span><em>源码</em>重新打开后定位同一字段，比较源值、资源引用和目标格式的降级清单。</span></div><div><h4>验收路径</h4><ol><li>同格式：保存写回当前皮肤，再从源码目录重新打开。</li><li>跨格式：左上角“导出”，先读降级列表并确认；搜狗 / 手心 → 百度属于实验性转换。</li><li>下载导出文件，关闭当前项目，重新打开；比对横竖屏、明暗主题、按键集合、工具栏和关键像素。</li></ol></div><div class="callout warning"><b>边界要说清</b><p>转换以已建模字段为准；搜狗按键动画、动态背景、平台特有面板和复杂资源可能降级。当前项目的跨格式转换已做预览与像素验证，但尚未覆盖所有真机安装组合。</p></div></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="downloads section-shell"><div><p class="eyebrow">跟着做</p><h2>下载真实样本，<br>在编辑器里打开。</h2><p>样本来自当前项目的公开模板，适合练习打开、检查、保存和重新打开。</p></div><div class="download-list"><a href="assets/default-template.bds" download><span class="file-icon">B</span><span><b>default-template.bds</b><small>百度 Android · 入门模板</small></span><span>↓</span></a><a href="assets/sogou-template.bds" download><span class="file-icon sogou">S</span><span><b>sogou-template.bds</b><small>搜狗转换 · 预览模板</small></span><span>↓</span></a><a href="assets/palm-harmony.sxi" download><span class="file-icon palm">P</span><span><b>palm-harmony.sxi</b><small>手心 · skin.json 皮肤</small></span><span>↓</span></a></div></section>
+
+    <section class="closing section-shell"><p class="eyebrow">继续深入</p><h2>先在画布里找到感觉，<br>再在源码里掌握它。</h2><div class="hero-actions"><a class="button" href="https://github.com/rekazer0/BdiEditor" target="_blank" rel="noreferrer">贡献编辑器</a><a class="text-link" href="#guide">回到教程 <span>↑</span></a></div></section>
+  </main>
+  <footer class="footer section-shell"><span>© 2026 BdiEditor community</span><span>基于当前 BdiEditor 开源项目整理 · GPL-3.0</span><a href="https://github.com/rekazer0/BdiEditor-Web" target="_blank" rel="noreferrer">网站源码 ↗</a></footer>
+  <script src="site.js"></script>
+</body>
+</html>
