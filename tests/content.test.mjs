@@ -1,21 +1,31 @@
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
-const html = readFileSync(new URL('../dist/index.html', import.meta.url), 'utf8');
-const tutorial = readFileSync(new URL('../dist/tutorial.html', import.meta.url), 'utf8');
-assert.match(html, /界面操作/);
-assert.match(html, /源代码操作/);
-assert.match(html, /百度/);
-assert.match(html, /搜狗/);
-assert.match(html, /手心/);
-assert.match(html, /chapter-export/);
-assert.match(html, /assets\/official-bds-editor\.png/);
-console.log('BdiEditor-Web content smoke test passed');
+import { existsSync, readFileSync } from 'node:fs';
 
+const dist = new URL('../dist/', import.meta.url);
+const html = readFileSync(new URL('index.html', dist), 'utf8');
+const script = readFileSync(new URL('site.js', dist), 'utf8');
 
-assert.match(tutorial, /每个修改/);
-assert.match(tutorial, /同一修改 · 两条路径/);
+// 品牌与核心卖点
+assert.match(html, /<title>键设 KeySkin/);
+for (const word of ['百度', '搜狗', '手心', '.bdi', '.bds', '.bda', '.ssf', '.sxi', 'keyskin.work', 'github.com/rekazer0/keyskin']) {
+  assert.ok(html.includes(word), `首页缺少「${word}」`);
+}
 
-assert.match(tutorial, /字段级教程/);
-assert.match(tutorial, /official-bds-editor\.png/);
-assert.match(tutorial, /RootView \/ CandidateView/);
-assert.match(tutorial, /skin\.json 是唯一源头/);
+// 每段功能演示都要有视频、封面和 GIF，且列表与脚本拼出的路径一致。
+const demos = [...html.matchAll(/data-demo="([a-z]+)"/g)].map((match) => match[1]);
+assert.deepEqual(demos, ['preview', 'typing', 'edit', 'source', 'motion', 'export', 'mobile']);
+for (const name of demos) {
+  for (const ext of ['mp4', 'jpg', 'gif']) {
+    assert.ok(existsSync(new URL(`assets/demos/${name}.${ext}`, dist)), `缺少 assets/demos/${name}.${ext}`);
+  }
+}
+assert.match(script, /assets\/demos\/\$\{name\}\.mp4/);
+
+// 页面里引用的本地资源都必须存在
+const local = [...html.matchAll(/(?:src|href|poster)="([^"#:]+)"/g)].map((match) => match[1]);
+for (const path of local) assert.ok(existsSync(new URL(path, dist)), `引用的文件不存在：${path}`);
+
+// 页面内锚点都能找到目标
+for (const [, id] of html.matchAll(/href="#([\w-]+)"/g)) assert.match(html, new RegExp(`id="${id}"`), `锚点 #${id} 没有目标`);
+
+console.log(`KeySkin site content test passed (${demos.length} demos, ${local.length} local assets)`);
