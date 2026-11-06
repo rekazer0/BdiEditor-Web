@@ -10,6 +10,8 @@ assert.match(html, /<title>键设 KeySkin/);
 for (const word of ['百度', '搜狗', '手心', '.bdi', '.bds', '.bda', '.ssf', '.sxi', 'keyskin.work', 'github.com/rekazer0/keyskin']) {
   assert.ok(html.includes(word), `首页缺少「${word}」`);
 }
+assert.match(html, /href="https:\/\/keyskin\.work\/demo\//);
+assert.doesNotMatch(html, /href="https:\/\/keyskin\.work\/demo"/);
 
 // 每段功能演示都要有视频、封面和 GIF，且列表与脚本拼出的路径一致。
 const demos = [...html.matchAll(/data-demo="([a-z]+)"/g)].map((match) => match[1]);
