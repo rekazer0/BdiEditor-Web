@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="description" content="键设 KeySkin：百度、搜狗、手心输入法皮肤的可视化编辑器。实时预览、所见即所得编辑、源码联动、动效设计与跨格式导出，支持 macOS、Windows、Android 与网页。">
+  <meta name="description" content="键设 KeySkin：百度、搜狗、手心输入法皮肤的可视化编辑器。移动端创作工作台、所见即所得编辑、资源与动画工作区、源码联动与跨格式导出，支持 macOS、Windows、Android 与网页。">
   <meta name="theme-color" content="#f7f6ef" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#1c1027" media="(prefers-color-scheme: dark)">
   <meta property="og:title" content="键设 KeySkin · 输入法皮肤编辑器">
@@ -43,7 +43,7 @@
           <a class="button" href="https://keyskin.work/demo/" target="_blank" rel="noreferrer">开始捏你的键盘 <span aria-hidden="true">↗</span></a>
           <a class="button button-ghost" href="#download"><span aria-hidden="true">↓</span> 下载客户端</a>
         </div>
-        <p class="hero-note">无需安装，打开浏览器就能开始。</p>
+        <p class="hero-note">打开浏览器就能开始，手机也能从内置模板新建。</p>
         <ul class="hero-meta" aria-label="支持平台">
           <li>macOS</li><li>Windows</li><li>Android</li><li>Web</li>
         </ul>
@@ -51,12 +51,116 @@
       <figure class="hero-media reveal">
         <div class="workshop-label" aria-hidden="true"><span><i></i> KEY SKIN / WORKSPACE</span><span>01 — ∞</span></div>
         <div class="hero-sticker" aria-hidden="true">灵感不设限<span>JUST CREATE!</span></div>
-        <div class="window">
-          <div class="window-bar" aria-hidden="true"><i></i><i></i><i></i><span>my-first-skin.bds <b>✦</b></span></div>
-          <video class="demo-video" src="assets/demos/preview.mp4" poster="assets/demos/preview.jpg" autoplay muted loop playsinline preload="metadata" aria-label="演示：从模板新建皮肤并切换设备、明暗与横竖屏"></video>
+        <div class="window" role="img" aria-label="键设编辑器静态预览：小米统一圆角内置模板。左侧是键盘布局列表，中间在棋盘格画布上选中了拼音九键的九个按键，右侧显示排列和布局设置。">
+          <div class="workspace" aria-hidden="true">
+            <div class="ws-rail">
+              <div class="ws-traffic"><i></i><i></i><i></i></div>
+              <img src="assets/app-icon.png" alt="" width="512" height="512">
+              <span><svg aria-hidden="true"><use href="assets/workspace-icons.svg#FolderOpen"/></svg>文件</span>
+              <span class="ws-active"><svg aria-hidden="true"><use href="assets/workspace-icons.svg#PanelsTopLeft"/></svg>概览</span>
+              <span><svg aria-hidden="true"><use href="assets/workspace-icons.svg#Box"/></svg>资源</span>
+              <span><svg aria-hidden="true"><use href="assets/workspace-icons.svg#Wrench"/></svg>工具</span>
+              <span><svg aria-hidden="true"><use href="assets/workspace-icons.svg#Clapperboard"/></svg>动画</span>
+              <span><svg aria-hidden="true"><use href="assets/workspace-icons.svg#CodeXml"/></svg>源代码</span>
+              <span><svg aria-hidden="true"><use href="assets/workspace-icons.svg#Sparkles"/></svg>AI 设计</span>
+              <span><svg aria-hidden="true"><use href="assets/workspace-icons.svg#Share"/></svg>分享</span>
+              <span><svg aria-hidden="true"><use href="assets/workspace-icons.svg#Settings"/></svg>设置</span>
+            </div>
+            <div class="ws-titlebar">
+              <span class="ws-pill"><svg aria-hidden="true"><use href="assets/workspace-icons.svg#Plug"/></svg></span>
+              <span class="ws-pill"><svg aria-hidden="true"><use href="assets/workspace-icons.svg#Keyboard"/></svg> <b>未命名.bds</b> <small>● 未保存</small></span>
+              <span class="ws-modes"><svg aria-hidden="true"><use href="assets/workspace-icons.svg#Undo2"/></svg><svg aria-hidden="true"><use href="assets/workspace-icons.svg#Redo2"/></svg> <span class="ws-pill"><b>编辑模式</b>　交互预览</span></span>
+            </div>
+            <div class="ws-sidebar">
+              <div class="ws-project">
+                <div class="ws-thumb"><i>分词</i><i>ABC</i><i>DEF</i><i>GHI</i><i>JKL</i><i>MNO</i><i>PQRS</i><i>TUV</i><i>WXYZ</i></div>
+                <div><b>小米统一圆角</b><br>皮肤信息　<em>BDS</em></div><svg aria-hidden="true"><use href="assets/workspace-icons.svg#ChevronRight"/></svg>
+              </div>
+              <p>键盘布局 <span>＋</span></p>
+              <ul>
+                <li><svg aria-hidden="true"><use href="assets/workspace-icons.svg#SlidersHorizontal"/></svg> 通用配置</li>
+                <li class="ws-active"><svg aria-hidden="true"><use href="assets/workspace-icons.svg#Grid3X3"/></svg> 拼音 9 键</li>
+                <li><svg aria-hidden="true"><use href="assets/workspace-icons.svg#Keyboard"/></svg> 拼音 26 键</li>
+                <li><svg aria-hidden="true"><use href="assets/workspace-icons.svg#PenTool"/></svg> 五笔 26 键</li>
+                <li><svg aria-hidden="true"><use href="assets/workspace-icons.svg#Pencil"/></svg> 五笔 9 键</li>
+                <li><svg aria-hidden="true"><use href="assets/workspace-icons.svg#CaseSensitive"/></svg> 英文 26 键</li>
+                <li><svg aria-hidden="true"><use href="assets/workspace-icons.svg#Type"/></svg> 英文 26 键</li>
+                <li><svg aria-hidden="true"><use href="assets/workspace-icons.svg#ArrowBigUp"/></svg> 英文 26 键 Shift</li>
+                <li><svg aria-hidden="true"><use href="assets/workspace-icons.svg#CaseUpper"/></svg> 英文 26 键 Shift</li>
+                <li><svg aria-hidden="true"><use href="assets/workspace-icons.svg#CaseLower"/></svg> 英文 9 键</li>
+                <li><svg aria-hidden="true"><use href="assets/workspace-icons.svg#ArrowBigUp"/></svg> 英文 9 键 Shift</li>
+                <li><svg aria-hidden="true"><use href="assets/workspace-icons.svg#Paintbrush"/></svg> 笔画键盘</li>
+                <li><svg aria-hidden="true"><use href="assets/workspace-icons.svg#Globe"/></svg> 网址键盘</li>
+                <li><svg aria-hidden="true"><use href="assets/workspace-icons.svg#Link"/></svg> 网址键盘大写</li>
+              </ul>
+              <p>数字与符号 <span>＋</span></p>
+              <ul>
+                <li><svg aria-hidden="true"><use href="assets/workspace-icons.svg#Binary"/></svg> 26 键数字键盘</li>
+                <li><svg aria-hidden="true"><use href="assets/workspace-icons.svg#Calculator"/></svg> 数字键盘</li>
+                <li><svg aria-hidden="true"><use href="assets/workspace-icons.svg#Asterisk"/></svg> 符号面板</li>
+              </ul>
+              <p>手写与选择 <span>＋</span></p>
+              <footer>ⓘ　共 23 个布局 · 1080 × 585</footer>
+            </div>
+            <div class="ws-center">
+              <div class="ws-tools"><span class="ws-pill"><svg aria-hidden="true"><use href="assets/workspace-icons.svg#Crosshair"/></svg>　默认　⌄</span><span class="ws-pill"><svg aria-hidden="true"><use href="assets/workspace-icons.svg#SquareDashed"/></svg> 棋盘格 <i>⌄</i></span><span class="ws-pill"><svg aria-hidden="true"><use href="assets/workspace-icons.svg#Smartphone"/></svg>　<svg aria-hidden="true"><use href="assets/workspace-icons.svg#Sun"/></svg></span></div>
+              <div class="ws-canvas">
+                <div class="ws-keyboard">
+                  <div class="ws-keybar"><svg aria-hidden="true"><use href="assets/workspace-icons.svg#LayoutGrid"/></svg><svg aria-hidden="true"><use href="assets/workspace-icons.svg#Smile"/></svg><svg aria-hidden="true"><use href="assets/workspace-icons.svg#Keyboard"/></svg><svg aria-hidden="true"><use href="assets/workspace-icons.svg#Mic"/></svg><svg aria-hidden="true"><use href="assets/workspace-icons.svg#Search"/></svg><svg aria-hidden="true"><use href="assets/workspace-icons.svg#ArrowLeftRight"/></svg><svg aria-hidden="true"><use href="assets/workspace-icons.svg#ClipboardPaste"/></svg><svg aria-hidden="true"><use href="assets/workspace-icons.svg#ChevronDown"/></svg></div>
+                  <div class="ws-keygrid">
+                    <div class="ws-key ws-punctuation"><span>，</span><span>。</span><span>?</span><span>!</span></div>
+                    <div class="ws-key ws-selected" style="--col:2;--row:1"><small>1</small>分词</div>
+                    <div class="ws-key ws-selected" style="--col:3;--row:1"><small>2</small>ABC</div>
+                    <div class="ws-key ws-selected" style="--col:4;--row:1"><small>3</small>DEF</div>
+                    <div class="ws-key ws-selected" style="--col:2;--row:2"><small>4</small>GHI</div>
+                    <div class="ws-key ws-selected" style="--col:3;--row:2"><small>5</small>JKL</div>
+                    <div class="ws-key ws-selected" style="--col:4;--row:2"><small>6</small>MNO</div>
+                    <div class="ws-key ws-selected" style="--col:2;--row:3"><small>7</small>PQRS</div>
+                    <div class="ws-key ws-selected" style="--col:3;--row:3"><small>8</small>TUV</div>
+                    <div class="ws-key ws-selected" style="--col:4;--row:3"><small>9</small>WXYZ</div>
+                    <div class="ws-key ws-delete"><svg aria-hidden="true"><use href="assets/workspace-icons.svg#Delete"/></svg></div><div class="ws-key ws-retype">重输</div>
+                    <div class="ws-key ws-enter"><svg aria-hidden="true"><use href="assets/workspace-icons.svg#CornerDownLeft"/></svg></div>
+                    <div class="ws-bottom">
+                      <div class="ws-key">符</div><div class="ws-key">123</div>
+                      <div class="ws-key ws-space"><small>0</small><svg aria-hidden="true"><use href="assets/workspace-icons.svg#Mic"/></svg><span></span></div>
+                      <div class="ws-key ws-language">中<sub>/英</sub></div>
+                    </div>
+                  </div>
+                  <div class="ws-keyfooter"><svg aria-hidden="true"><use href="assets/workspace-icons.svg#Keyboard"/></svg><svg aria-hidden="true"><use href="assets/workspace-icons.svg#PanelsTopLeft"/></svg></div>
+                </div>
+                <span class="ws-guide-label">x: 958　 y: 358</span>
+                <div class="ws-canvas-foot"><span>⊞</span><span><em>将修改 9 个按键</em><svg aria-hidden="true"><use href="assets/workspace-icons.svg#AlignHorizontalJustifyStart"/></svg><svg aria-hidden="true"><use href="assets/workspace-icons.svg#AlignHorizontalJustifyEnd"/></svg><svg aria-hidden="true"><use href="assets/workspace-icons.svg#AlignVerticalJustifyStart"/></svg><svg aria-hidden="true"><use href="assets/workspace-icons.svg#AlignVerticalJustifyEnd"/></svg><svg aria-hidden="true"><use href="assets/workspace-icons.svg#MoveHorizontal"/></svg><svg aria-hidden="true"><use href="assets/workspace-icons.svg#MoveVertical"/></svg></span><span>−　⛶　＋</span></div>
+              </div>
+              <footer>1080 × 585 · 61%</footer>
+            </div>
+            <div class="ws-inspector">
+              <div class="ws-selection"><svg aria-hidden="true"><use href="assets/workspace-icons.svg#Layers"/></svg> <span><b>已选 9 个按键</b><br><small>py_9.ini · key…</small></span><svg aria-hidden="true"><use href="assets/workspace-icons.svg#MousePointer2"/></svg><svg aria-hidden="true"><use href="assets/workspace-icons.svg#Move"/></svg><svg aria-hidden="true"><use href="assets/workspace-icons.svg#Copy"/></svg><svg aria-hidden="true"><use href="assets/workspace-icons.svg#ArrowLeftRight"/></svg><svg aria-hidden="true"><use href="assets/workspace-icons.svg#Trash2"/></svg><svg aria-hidden="true"><use href="assets/workspace-icons.svg#CodeXml"/></svg></div>
+              <div class="ws-panel">
+                <div class="ws-panel-title"><b>排列</b><small>将修改 9 个按键</small></div>
+                <div class="ws-align"><svg aria-hidden="true"><use href="assets/workspace-icons.svg#AlignHorizontalJustifyStart"/></svg><svg aria-hidden="true"><use href="assets/workspace-icons.svg#AlignHorizontalJustifyEnd"/></svg><svg aria-hidden="true"><use href="assets/workspace-icons.svg#AlignVerticalJustifyStart"/></svg><svg aria-hidden="true"><use href="assets/workspace-icons.svg#AlignVerticalJustifyEnd"/></svg><svg aria-hidden="true"><use href="assets/workspace-icons.svg#MoveHorizontal"/></svg><svg aria-hidden="true"><use href="assets/workspace-icons.svg#MoveVertical"/></svg></div>
+                <div class="ws-fields"><span>尺寸</span> <b>等宽</b><b>等高</b><span>间距</span> <span>水平 混合</span><span>垂直 混合</span><span>两个按键</span> <span>⇆ 交换</span><span>▧ 合并</span></div>
+                <hr><b>布局</b>
+                <div class="ws-diagram"><span></span><span>↑ 0</span><span></span><span>← 0</span><b>706 × 424</b><span>→ 0</span><span></span><span>↓ 0</span><span></span></div>
+                <div class="ws-fields"><span>位置</span> <span>X 混合</span><span>Y 混合</span><span>尺寸</span> <span>W 230</span><span>H 混合</span></div>
+                <hr><b>样式</b><p>背景</p>
+                <div class="ws-swatches"><b>118</b><i></i><i></i></div>
+                <p>前景 <span>＋</span></p>
+              </div>
+              <div class="ws-panel-rail">
+                <span><svg aria-hidden="true"><use href="assets/workspace-icons.svg#Search"/></svg></span>
+                <span class="ws-active"><svg aria-hidden="true"><use href="assets/workspace-icons.svg#PanelTop"/></svg>排列</span>
+                <span><svg aria-hidden="true"><use href="assets/workspace-icons.svg#Hash"/></svg>布局</span>
+                <span><svg aria-hidden="true"><use href="assets/workspace-icons.svg#Palette"/></svg>样式</span>
+                <span><svg aria-hidden="true"><use href="assets/workspace-icons.svg#Clapperboard"/></svg>动画</span>
+                <span><svg aria-hidden="true"><use href="assets/workspace-icons.svg#Volume2"/></svg>音效</span>
+                <span><svg aria-hidden="true"><use href="assets/workspace-icons.svg#Type"/></svg>文字</span>
+                <span><svg aria-hidden="true"><use href="assets/workspace-icons.svg#Zap"/></svg>手势</span>
+              </div>
+            </div>
+          </div>
         </div>
         <img class="hero-mascot" src="assets/mascot.png" alt="" width="296" height="296">
-        <figcaption><span class="record-dot" aria-hidden="true"></span> 真实编辑器录屏 <span>所见，即所得。</span></figcaption>
+        <figcaption><span class="record-dot" aria-hidden="true"></span> 内置模板 · 小米统一圆角 <span>所见，即所得。</span></figcaption>
       </figure>
       <div class="hero-bottomline"><span>一点灵感，亿点可能。</span><a href="#demos">往下探索 <span aria-hidden="true">↓</span></a></div>
     </section>
@@ -76,54 +180,78 @@
       <div class="section-head reveal">
         <p class="eyebrow">01 / PLAYGROUND</p>
         <h2>灵感落地，<span class="heading-mark">眼见为实。</span></h2>
-        <p class="section-lede">不用脑补效果，也不用反复安装。七段真实操作，带你逛逛键设的创作现场。点击切换，播完自动探索下一段。</p>
+        <p class="section-lede">不用脑补效果，也不用反复安装。十一段操作演示：把动画拖到按键、定制常驻工具栏、挑选界面主题，也能看到桌面端如何通过 ADB 推送皮肤、手机上如何编辑。</p>
       </div>
 
       <div class="theater reveal" data-theater>
         <ol class="theater-list" role="tablist" aria-label="功能演示列表">
-          <li><button type="button" role="tab" aria-selected="true" data-demo="preview" data-shape="wide">
-            <span class="tab-title">实时预览与真机外框</span>
+          <li><button type="button" role="tab" id="tab-preview" aria-controls="demo-stage" aria-selected="true" data-demo="preview" data-shape="wide">
+            <span class="tab-title">实时预览与设备外框</span>
             <span class="tab-desc">5 款机型、明暗、横竖屏一键切换</span>
             <span class="tab-progress" aria-hidden="true"><span></span></span>
           </button></li>
-          <li><button type="button" role="tab" aria-selected="false" data-demo="typing" data-shape="tall">
-            <span class="tab-title">交互预览：真的能打字</span>
+          <li><button type="button" role="tab" id="tab-typing" aria-controls="demo-stage" aria-selected="false" tabindex="-1" data-demo="typing" data-shape="phone">
+            <span class="tab-title">交互预览：模拟打字</span>
             <span class="tab-desc">按下效果、气泡、输入码与候选栏</span>
             <span class="tab-progress" aria-hidden="true"><span></span></span>
           </button></li>
-          <li><button type="button" role="tab" aria-selected="false" data-demo="edit" data-shape="wide">
+          <li><button type="button" role="tab" id="tab-edit" aria-controls="demo-stage" aria-selected="false" tabindex="-1" data-demo="edit" data-shape="wide">
             <span class="tab-title">所见即所得地编辑按键</span>
-            <span class="tab-desc">拖动、对齐辅助线、精确数值、撤销</span>
+            <span class="tab-desc">在属性面板精确调整按键尺寸，一步撤销</span>
             <span class="tab-progress" aria-hidden="true"><span></span></span>
           </button></li>
-          <li><button type="button" role="tab" aria-selected="false" data-demo="source" data-shape="wide">
+          <li><button type="button" role="tab" id="tab-source" aria-controls="demo-stage" aria-selected="false" tabindex="-1" data-demo="source" data-shape="wide">
             <span class="tab-title">源码联动</span>
-            <span class="tab-desc">选中即定位配置，改一行画布立刻变</span>
+            <span class="tab-desc">在属性旁定位按键配置，直接修改位置</span>
             <span class="tab-progress" aria-hidden="true"><span></span></span>
           </button></li>
-          <li><button type="button" role="tab" aria-selected="false" data-demo="motion" data-shape="wide">
-            <span class="tab-title">动效与粒子设计</span>
-            <span class="tab-desc">动画列表、时间轴播放器、参数编辑</span>
+          <li><button type="button" role="tab" id="tab-resources" aria-controls="demo-stage" aria-selected="false" tabindex="-1" data-demo="resources" data-shape="wide">
+            <span class="tab-title">资源工作区</span>
+            <span class="tab-desc">按类型浏览素材，打开图片查看切片</span>
             <span class="tab-progress" aria-hidden="true"><span></span></span>
           </button></li>
-          <li><button type="button" role="tab" aria-selected="false" data-demo="export" data-shape="wide">
+          <li><button type="button" role="tab" id="tab-motion" aria-controls="demo-stage" aria-selected="false" tabindex="-1" data-demo="motion" data-gif data-shape="wide">
+            <span class="tab-title">拖动动画应用到按键</span>
+            <span class="tab-desc">从动画库拖到按键，确认触发方式即可应用</span>
+            <span class="tab-progress" aria-hidden="true"><span></span></span>
+          </button></li>
+          <li><button type="button" role="tab" id="tab-export" aria-controls="demo-stage" aria-selected="false" tabindex="-1" data-demo="export" data-shape="wide">
             <span class="tab-title">跨格式导出</span>
-            <span class="tab-desc">百度皮肤一键转成手心 .sxi 并重新打开</span>
+            <span class="tab-desc">旧版百度 .bds 转新版 .bda，确认差异后另存</span>
             <span class="tab-progress" aria-hidden="true"><span></span></span>
           </button></li>
-          <li><button type="button" role="tab" aria-selected="false" data-demo="mobile" data-shape="tall">
+          <li><button type="button" role="tab" id="tab-adb" aria-controls="demo-stage" aria-selected="false" tabindex="-1" data-demo="adb" data-gif data-shape="wide">
+            <span class="tab-title">连接 ADB 并推送皮肤</span>
+            <span class="tab-desc">桌面客户端：测试连接并发送到模拟 Android 设备</span>
+            <span class="tab-progress" aria-hidden="true"><span></span></span>
+          </button></li>
+          <li><button type="button" role="tab" id="tab-toolbar" aria-controls="demo-stage" aria-selected="false" tabindex="-1" data-demo="toolbar" data-gif data-shape="wide">
+            <span class="tab-title">自定义工具栏</span>
+            <span class="tab-desc">把保存、导出拖到顶栏，按习惯排列</span>
+            <span class="tab-progress" aria-hidden="true"><span></span></span>
+          </button></li>
+          <li><button type="button" role="tab" id="tab-theme" aria-controls="demo-stage" aria-selected="false" tabindex="-1" data-demo="theme" data-gif data-shape="wide">
+            <span class="tab-title">选择界面主题</span>
+            <span class="tab-desc">从缩略图预览玫瑰石英、深海蓝等主题</span>
+            <span class="tab-progress" aria-hidden="true"><span></span></span>
+          </button></li>
+          <li><button type="button" role="tab" id="tab-mobile" aria-controls="demo-stage" aria-selected="false" tabindex="-1" data-demo="mobile" data-shape="tall">
             <span class="tab-title">手机上也能改</span>
-            <span class="tab-desc">上下分屏、触屏操作、随手预览</span>
+            <span class="tab-desc">从首页选模板，先试按，再进入编辑</span>
             <span class="tab-progress" aria-hidden="true"><span></span></span>
           </button></li>
         </ol>
-        <div class="theater-stage" data-shape="wide">
+        <div class="theater-stage" id="demo-stage" role="tabpanel" aria-labelledby="tab-preview" data-shape="wide">
           <div class="stage-frame">
-            <video class="demo-video" data-stage-video src="assets/demos/preview.mp4" poster="assets/demos/preview.jpg" muted playsinline preload="metadata" aria-label="功能演示视频"></video>
+            <video class="demo-video" width="1600" height="1000" data-stage-video src="assets/demos/preview.mp4" poster="assets/demos/preview.jpg" muted controls playsinline preload="metadata" aria-label="功能演示视频"></video>
+            <img data-stage-image width="1600" height="1000" alt="" hidden>
           </div>
           <div class="stage-foot">
-            <p data-stage-caption>真实录屏 · 实时预览与真机外框</p>
-            <a class="text-link" data-stage-gif href="assets/demos/preview.gif" download>下载 GIF 动图</a>
+            <p data-stage-caption>真实录屏 · 实时预览与设备外框</p>
+            <div class="stage-actions">
+              <button type="button" class="text-link" data-stage-toggle hidden>播放 GIF</button>
+              <a class="text-link" data-stage-gif href="assets/demos/preview.gif" download>下载 GIF 动图</a>
+            </div>
           </div>
         </div>
       </div>
@@ -133,7 +261,7 @@
       <article class="feature-row reveal">
         <div class="feature-copy">
           <p class="eyebrow">预览</p>
-          <h3>和真机一样的画面</h3>
+          <h3>在设备外框中预览键盘</h3>
           <p>内置 iPhone 17 Pro / Pro Max、Xiaomi 17、Pixel 10 Pro、Galaxy S25 Ultra 的厂商分辨率模板，按各自屏幕与安全区渲染。浅色 / 深色、竖屏 / 横屏、普通 / 按下 / 滑动 / 长按状态都能直接看到。</p>
           <ul class="checks">
             <li>九键、魔改九键、26 键布局自动识别</li>
@@ -142,7 +270,7 @@
           </ul>
         </div>
         <figure class="feature-media media-tall">
-          <video class="demo-video" data-lazy src="assets/demos/typing.mp4" poster="assets/demos/typing.jpg" muted loop playsinline preload="none" aria-label="演示：在交互预览中用 26 键输入拼音"></video>
+          <video class="demo-video" width="676" height="1348" data-lazy src="assets/demos/typing.mp4" poster="assets/demos/typing.jpg" muted loop playsinline preload="none" aria-label="演示：在交互预览中用 26 键输入拼音"></video>
         </figure>
       </article>
 
@@ -158,7 +286,7 @@
           </ul>
         </div>
         <figure class="feature-media">
-          <video class="demo-video" data-lazy src="assets/demos/edit.mp4" poster="assets/demos/edit.jpg" muted loop playsinline preload="none" aria-label="演示：拖动按键并在检查器中修改尺寸"></video>
+          <video class="demo-video" width="1600" height="1000" data-lazy src="assets/demos/edit.mp4" poster="assets/demos/edit.jpg" muted loop playsinline preload="none" aria-label="演示：在检查器修改按键尺寸并撤销"></video>
         </figure>
       </article>
 
@@ -174,23 +302,46 @@
           </ul>
         </div>
         <figure class="feature-media">
-          <video class="demo-video" data-lazy src="assets/demos/source.mp4" poster="assets/demos/source.jpg" muted loop playsinline preload="none" aria-label="演示：在源代码中修改按键背景样式"></video>
+          <video class="demo-video" width="1600" height="1000" data-lazy src="assets/demos/source.mp4" poster="assets/demos/source.jpg" muted loop playsinline preload="none" aria-label="演示：在源代码中修改按键位置"></video>
         </figure>
       </article>
 
       <article class="feature-row reveal" data-flip>
         <div class="feature-copy">
+          <p class="eyebrow">资源</p>
+          <h3>皮肤里的图片、字体和声音，一处找齐</h3>
+          <p>在资源工作区按类型、名称和明暗外观筛选，快速找到样式、图片、字体和音效。双击图片能查看图集切片，重命名图片时会同步更新引用。</p>
+        </div>
+        <figure class="feature-media">
+          <video class="demo-video" width="1600" height="1000" data-lazy src="assets/demos/resources.mp4" poster="assets/demos/resources.jpg" muted loop playsinline preload="none" aria-label="演示：在资源工作区浏览图片并打开图集"></video>
+        </figure>
+      </article>
+
+      <article class="feature-row reveal">
+        <div class="feature-copy">
           <p class="eyebrow">动效</p>
-          <h3>动画不再靠猜参数</h3>
-          <p>手心 <code>skin.json</code>、百度旧版 <code>anim.ini</code> 与 BDA <code>animationConfig</code> 统一成“动效设计”和“粒子设计”两个工作区。选中动画即可播放、暂停、拖动时间轴、循环或 ¼× 慢放，组合动画每个子动画一条轨道。</p>
+          <h3>把动画拖到按键上</h3>
+          <p>从左侧「动画」打开独立工作区。左边按动效、粒子筛选，中间用时间轴、循环和 ¼× 慢放看效果，右边编辑参数；组合动画的子动画各有一条轨道。</p>
           <ul class="checks">
             <li>列出哪些样式和按键在使用这段动画</li>
-            <li>手心与旧版皮肤可新建、复制动画</li>
+            <li>百度经典格式和手心皮肤支持新建动效，也可把动效拖到按键等目标，确认后一步应用、一步撤销</li>
             <li>BDA 导出为旧版时自动转换为 anim.ini</li>
           </ul>
         </div>
         <figure class="feature-media">
-          <video class="demo-video" data-lazy src="assets/demos/motion.mp4" poster="assets/demos/motion.jpg" muted loop playsinline preload="none" aria-label="演示：动效设计工作区播放动画"></video>
+          <video class="demo-video" width="1600" height="1000" data-lazy src="assets/demos/motion.mp4" poster="assets/demos/motion.jpg" muted loop playsinline preload="none" aria-label="演示：把内置皮肤的动画拖到按键，确认触发方式并应用"></video>
+        </figure>
+      </article>
+
+      <article class="feature-row reveal" data-flip>
+        <div class="feature-copy">
+          <p class="eyebrow">转换</p>
+          <h3>在「分享与导出」里完成转换</h3>
+          <p>在同一窗口选择格式、查看兼容性差异并另存。录屏以「小米统一圆角」内置模板为例，从百度旧版 <code>.bds</code> 导出新版 Android <code>.bda</code>。百度、搜狗与手心支持常用转换方向，搜狗与手心不直接互转。</p>
+          <p class="note">转新版 BDA 会使用官方面板布局，自定义按键位置、布局与手势可能无法保留。导出后的效果请以目标输入法真机安装为准。</p>
+        </div>
+        <figure class="feature-media">
+          <video class="demo-video" width="1600" height="1000" data-lazy src="assets/demos/export.mp4" poster="assets/demos/export.jpg" muted loop playsinline preload="none" aria-label="演示：确认兼容性差异并另存为百度新版 BDA"></video>
         </figure>
       </article>
     </section>
@@ -218,18 +369,6 @@
           <dl><dt>可导出为</dt><dd>.bdi · .bds · .bda · .sxi</dd></dl>
         </article>
       </div>
-
-      <article class="feature-row feature-row-wide reveal">
-        <div class="feature-copy">
-          <p class="eyebrow">转换</p>
-          <h3>百度、搜狗、手心之间互相转换</h3>
-          <p>从“导出”菜单选目标格式即可。演示里把一套百度 BDS 皮肤导出成手心 <code>.sxi</code>，再打开导出的文件——同样的键盘，已经由手心渲染器绘制。</p>
-          <p class="note">跨格式转换为实验性功能，最终效果请以目标输入法真机安装为准。</p>
-        </div>
-        <figure class="feature-media">
-          <video class="demo-video" data-lazy src="assets/demos/export.mp4" poster="assets/demos/export.jpg" muted loop playsinline preload="none" aria-label="演示：导出为手心皮肤并重新打开"></video>
-        </figure>
-      </article>
     </section>
 
     <section class="section">
@@ -239,9 +378,9 @@
       </div>
       <div class="grid">
         <article class="card reveal"><span class="card-icon" data-icon="spark" aria-hidden="true"></span><h3>AI 设计</h3><p>桌面版可配置自己的模型服务，用一句话描述风格或改动；支持“当前面板 / 整个皮肤”范围、多个设计方向，整轮修改一步撤销。</p></article>
-        <article class="card reveal"><span class="card-icon" data-icon="image" aria-hidden="true"></span><h3>资源与样式库</h3><p>统一样式库、图片资源选择器与切片查看；替换图片保留九宫格拉伸参数，声音资源可直接试听。</p></article>
-        <article class="card reveal"><span class="card-icon" data-icon="tools" aria-hidden="true"></span><h3>面板工具</h3><p>面板复制（整套分辨率按屏宽缩放）、替换键盘样式、iOS 26 透明背景适配，百度、搜狗、手心都支持。</p></article>
-        <article class="card reveal"><span class="card-icon" data-icon="template" aria-hidden="true"></span><h3>模板起步</h3><p>内置百度官方 BDA / BDS 模板与多套整理好的 BDS 皮肤，也能直接新建空白皮肤。</p></article>
+        <article class="card reveal"><span class="card-icon" data-icon="image" aria-hidden="true"></span><h3>界面主题</h3><p>在「设置 → 外观」浏览主题缩略图，点击就能预览整套编辑器界面。录屏里同一款内置皮肤先后切换到玫瑰石英和深海蓝。</p></article>
+        <article class="card reveal"><span class="card-icon" data-icon="tools" aria-hidden="true"></span><h3>自定义工具栏</h3><p>从「工具」把保存、导出、面板工具等常用动作拖到顶部，直接拖动排序。下次打开，常驻工具仍在原位。</p></article>
+        <article class="card reveal"><span class="card-icon" data-icon="template" aria-hidden="true"></span><h3>模板起步</h3><p>内置百度官方 BDA / BDS、手心鸿蒙和社区 BDS 模板。</p></article>
         <article class="card reveal"><span class="card-icon" data-icon="lock" aria-hidden="true"></span><h3>本地处理</h3><p>除你主动使用 AI 设计外，皮肤、配置和图片都只在本机处理，不会上传。</p></article>
         <article class="card reveal"><span class="card-icon" data-icon="undo" aria-hidden="true"></span><h3>放心试错</h3><p>完整的撤销 / 重做、未保存保护，保存与导出都有明确的进行中、成功、失败反馈。</p></article>
       </div>
@@ -252,15 +391,15 @@
         <div class="feature-copy">
           <p class="eyebrow">移动端</p>
           <h3>手机浏览器打开就能用</h3>
-          <p>窄屏下自动切换为可拖动调整比例的上下分屏：上面是文件、属性与源码，下面是画布。双指缩放平移，iOS Safari 可直接选择皮肤文件，并通过系统分享发给输入法。</p>
+          <p>从手机首页新建或打开皮肤后，默认进入交互预览。试按合适了，点「开始编辑」，画布与属性面板同屏，拖动分隔线就能调整空间。</p>
           <ul class="checks">
-            <li>适配刘海、灵动岛与底部安全区</li>
-            <li>编辑模式与交互预览一键切换</li>
+            <li>底栏可切到首页、编辑或资源，回来继续改，未保存的改动仍在</li>
+            <li>按键属性与源码都能在手机上查看和编辑</li>
             <li>Android 还有独立 App</li>
           </ul>
         </div>
         <figure class="feature-media media-tall">
-          <video class="demo-video" data-lazy src="assets/demos/mobile.mp4" poster="assets/demos/mobile.jpg" muted loop playsinline preload="none" aria-label="演示：在手机浏览器中编辑与预览皮肤"></video>
+          <video class="demo-video" width="780" height="1688" data-lazy src="assets/demos/mobile.mp4" poster="assets/demos/mobile.jpg" muted loop playsinline preload="none" aria-label="演示：在手机浏览器中编辑与预览皮肤"></video>
         </figure>
       </article>
     </section>
@@ -271,10 +410,10 @@
         <h2>四步做好一套皮肤</h2>
       </div>
       <ol class="steps">
-        <li class="reveal"><span class="step-no">1</span><h3>打开或新建</h3><p>点左上角“打开”选择 .bdi / .bds / .bda / .ssf / .sxi，或从启动页的模板开始。</p></li>
-        <li class="reveal"><span class="step-no">2</span><h3>找到要改的地方</h3><p>左侧“概览”按键盘布局、候选栏、工具栏、资源分类；“源文件”可直接浏览皮肤包。</p></li>
+        <li class="reveal"><span class="step-no">1</span><h3>打开或新建</h3><p>从桌面「文件」或手机「首页」打开已有文件，也可以选内置模板新建。</p></li>
+        <li class="reveal"><span class="step-no">2</span><h3>找到要改的地方</h3><p>在「概览」选择布局，在「资源」和「动画」管理素材与动效。「源代码」可直接浏览皮肤包。</p></li>
         <li class="reveal"><span class="step-no">3</span><h3>切到编辑模式</h3><p>点击画布上的按键，在右侧检查器修改；随时切回“交互预览”试按。</p></li>
-        <li class="reveal"><span class="step-no">4</span><h3>保存或导出</h3><p>“保存”写回当前格式；“导出”转换为其他输入法格式，网页版还可直接分享。</p></li>
+        <li class="reveal"><span class="step-no">4</span><h3>保存或导出</h3><p>在「分享与导出」中保存当前格式、另存为其他格式，或在支持的设备上使用系统分享。</p></li>
       </ol>
     </section>
 
@@ -282,7 +421,7 @@
       <div class="section-head reveal">
         <p class="eyebrow">05 / PRESS START</p>
         <h2>下一套心动皮肤，<br>从你手里诞生。</h2>
-        <p class="section-lede">网页版无需安装，功能与桌面版一致（AI 设计与最近文件除外）。</p>
+        <p class="section-lede">网页版无需安装。原生文件关联、最近文件、ADB 分享和 AI 设计等功能以各平台客户端为准。</p>
       </div>
       <div class="download-grid">
         <a class="download-card download-primary reveal" href="https://keyskin.work/demo/" target="_blank" rel="noreferrer">

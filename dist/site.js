@@ -31,30 +31,47 @@ const videoObserver = new IntersectionObserver((entries) => {
     }
   }
 }, { threshold: 0.25 })
-document.querySelectorAll(".hero-media video, video[data-lazy]").forEach((video) => {
+document.querySelectorAll("video[data-lazy]").forEach((video) => {
   if (reducedMotion) {
-    video.removeAttribute("autoplay")
     video.controls = true
     video.pause()
   }
   videoObserver.observe(video)
 })
 
-// 功能演示：左侧列表切换右侧视频，播完自动下一段。
+// 功能演示：左侧列表切换右侧视频或 GIF，视频播完自动下一段。
 const theater = document.querySelector("[data-theater]")
 if (theater) {
-  const tabs = [...theater.querySelectorAll('[role="tab"]')]
+  const list = theater.querySelector(".theater-list")
+  const tabs = [...list.querySelectorAll('[role="tab"]')]
   const stage = theater.querySelector(".theater-stage")
   const video = theater.querySelector("[data-stage-video]")
   const caption = theater.querySelector("[data-stage-caption]")
   const gif = theater.querySelector("[data-stage-gif]")
+  const image = theater.querySelector("[data-stage-image]")
+  const toggle = theater.querySelector("[data-stage-toggle]")
+  let gifPlaying = false
   let current = 0
   let inView = false
-  if (reducedMotion) video.controls = true
 
   const progressOf = (tab) => tab.querySelector(".tab-progress span")
 
-  const select = (index, { focus = false, autoplay = true } = {}) => {
+  const syncMedia = () => {
+    if (image.hidden) {
+      if (inView) play(video)
+      else video.pause()
+      return
+    }
+    image.src = inView && gifPlaying ? gif.href : `assets/demos/${tabs[current].dataset.demo}.jpg`
+    toggle.textContent = gifPlaying ? "停止 GIF" : "播放 GIF"
+  }
+
+  toggle.addEventListener("click", () => {
+    gifPlaying = !gifPlaying
+    syncMedia()
+  })
+
+  const select = (index, { focus = false } = {}) => {
     current = (index + tabs.length) % tabs.length
     const tab = tabs[current]
     const name = tab.dataset.demo
@@ -63,19 +80,32 @@ if (theater) {
       item.tabIndex = i === current ? 0 : -1
       progressOf(item).style.transform = "scaleX(0)"
     })
-    if (focus) tab.focus()
+    if (focus) tab.focus({ preventScroll: true })
+    const title = tab.querySelector(".tab-title").textContent
     stage.dataset.shape = tab.dataset.shape
-    stage.toggleAttribute("data-switching", true)
-    window.setTimeout(() => {
+    stage.setAttribute("aria-labelledby", tab.id)
+    const showGif = tab.hasAttribute("data-gif")
+    video.hidden = showGif
+    image.hidden = toggle.hidden = !showGif
+    gifPlaying = showGif && !reducedMotion
+    if (showGif) {
+      video.pause()
+      image.alt = `演示：${title}`
+    } else {
+      image.removeAttribute("src")
       video.poster = `assets/demos/${name}.jpg`
       video.src = `assets/demos/${name}.mp4`
-      caption.textContent = `真实录屏 · ${tab.querySelector(".tab-title").textContent}`
-      gif.href = `assets/demos/${name}.gif`
-      stage.toggleAttribute("data-switching", false)
-      if (autoplay && inView) play(video)
-    }, reducedMotion ? 0 : 180)
-    // 窄屏时列表横向滚动，让当前项保持可见。
-    tab.scrollIntoView({ block: "nearest", inline: "nearest", behavior: reducedMotion ? "auto" : "smooth" })
+      video.setAttribute("aria-label", `演示：${title}`)
+    }
+    caption.textContent = `真实录屏 · ${title}`
+    gif.href = `assets/demos/${name}.gif`
+    syncMedia()
+    // 只滚动横向选项列表，自动换片不移动页面。
+    if (list.scrollWidth > list.clientWidth) {
+      const item = tab.getBoundingClientRect()
+      const track = list.getBoundingClientRect()
+      list.scrollBy({ left: item.left < track.left ? item.left - track.left : Math.max(0, item.right - track.right + 4), behavior: reducedMotion ? "auto" : "smooth" })
+    }
   }
 
   tabs.forEach((tab, index) => {
@@ -91,14 +121,15 @@ if (theater) {
   })
 
   video.addEventListener("timeupdate", () => {
-    if (!video.duration) return
+    if (video.hidden || !video.duration) return
     progressOf(tabs[current]).style.transform = `scaleX(${video.currentTime / video.duration})`
   })
-  video.addEventListener("ended", () => select(current + 1))
+  video.addEventListener("ended", () => {
+    if (!video.hidden && !reducedMotion) select(current + 1)
+  })
 
   new IntersectionObserver(([entry]) => {
     inView = entry.isIntersecting
-    if (inView) play(video)
-    else video.pause()
+    syncMedia()
   }, { threshold: 0.3 }).observe(stage)
 }
